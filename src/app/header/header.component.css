@@ -1,0 +1,34 @@
+/* Estilos generales del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: aliceblue;
+    padding: 10px;
+    font-family: Arial, sans-serif;  
+  
+  }
+  
+  /* Estilos del logo */
+  .logo {
+    font-weight: bold;
+  }
+  
+  /* Estilos de la barra de navegación */
+  nav ul {
+    list-style: none;
+    display:flex;
+    color: white;
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  

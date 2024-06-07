@@ -1,0 +1,62 @@
+
+.login-frame {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 30px solid #000000;
+    border-radius: 5px;
+    background-color: #ececec;
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  .login-frame h2 {
+    text-align: center;
+    
+  }
+  
+  .login-frame .user-image {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .login-frame form {
+    margin-top: 20px;
+    
+  }
+  
+  .login-frame input[type="text"],
+  .login-frame input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+  }
+  
+  .login-frame button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-frame button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .login-container {
+   
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  
+  }
