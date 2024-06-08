@@ -1,0 +1,66 @@
+<div class="container mt-4">
+    <h2 class="text-center">Recetas por Región</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let region of regiones">
+        <div class="card mb-3">
+          <img [src]="region.imagen" class="card-img-top" alt="{{ region.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ region.nombre }}</h5>
+            <p class="card-text">{{ region.descripcion }}</p>
+            <button class="btn btn-primary" (click)="toggleRecetas(region)">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal for selected region recipes -->
+    <div *ngIf="selectedRegion" class="modal" tabindex="-1" role="dialog" style="display:block;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Recetas de {{ selectedRegion.nombre }}</h5>
+            <button type="button" class="close" aria-label="Close" (click)="closeRegion()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li 
+                class="list-group-item" 
+                *ngFor="let receta of selectedRegion.recetas" 
+                (click)="selectReceta(receta)">
+                {{ receta.nombre }}
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeRegion()">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal for selected recipe -->
+    <div *ngIf="selectedReceta" class="modal" tabindex="-1" role="dialog" style="display:block;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{ selectedReceta.nombre }}</h5>
+            <button type="button" class="close" aria-label="Close" (click)="closeReceta()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img [src]="selectedReceta.imagen" class="img-fluid mb-3" alt="{{ selectedReceta.nombre }}">
+            <p>{{ selectedReceta.descripcion }}</p>
+            <p>{{ selectedReceta.receta }}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeReceta()">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
