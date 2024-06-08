@@ -28,18 +28,18 @@ export class RecetasRegionComponent {
   regiones: Region[] = [
     {
       nombre: 'Costa',
-      imagen: 'assets/images/Regiones/Costa.jpg',
+      imagen: 'assets/Regiones/Costa.jpg',
       descripcion: 'La región costera del Ecuador, conocida por sus hermosas playas y su rica gastronomía marina.',
       recetas: [
         {
           nombre: 'Ceviche',
-          imagen: 'assets/images/Platos/ceviche.jpg',
+          imagen: 'assets/Platos/ceviche.jpg',
           descripcion: 'Delicioso ceviche de camarones típico de la costa ecuatoriana.',
           receta: 'Ingredientes y pasos para preparar el ceviche.'
         },
         {
           nombre: 'Encebollado',
-          imagen: 'assets/images/Platos/Encebollado.jpg',
+          imagen: 'assets/Platos/Encebollado.jpg',
           descripcion: 'Sopa de pescado con yuca, muy popular en la costa.',
           receta: 'Ingredientes y pasos para preparar el encebollado.'
         }
@@ -47,18 +47,18 @@ export class RecetasRegionComponent {
     },
     {
       nombre: 'Sierra',
-      imagen: 'assets/images/Regiones/Sierra.jpg',
+      imagen: 'assets/Regiones/Sierra.jpg',
       descripcion: 'La región andina del Ecuador, famosa por sus paisajes montañosos y platos tradicionales.',
       recetas: [
         {
           nombre: 'Llapingachos',
-          imagen: 'assets/images/Platos/llapingachos.jpg',
+          imagen: 'assets/Platos/llapingachos.jpg',
           descripcion: 'Tortillas de papa rellenas de queso, típicas de la sierra.',
           receta: 'Ingredientes y pasos para preparar llapingachos.'
         },
         {
           nombre: 'Hornado',
-          imagen: 'assets/images/Platos/hornado.jpg',
+          imagen: 'assets/Platos/hornado.jpg',
           descripcion: 'Cerdo asado con mote, muy popular en la región andina.',
           receta: 'Ingredientes y pasos para preparar hornado.'
         }
@@ -66,18 +66,18 @@ export class RecetasRegionComponent {
     },
     {
       nombre: 'Amazonía',
-      imagen: 'assets/images/Regiones/Amazonia.jpg',
+      imagen: 'assets/Regiones/Amazonia.jpg',
       descripcion: 'La región amazónica del Ecuador, hogar de una biodiversidad increíble y recetas exóticas.',
       recetas: [
         {
           nombre: 'Maito',
-          imagen: 'assets/images/Platos/maito.jpg',
+          imagen: 'assets/Platos/maito.jpg',
           descripcion: 'Pescado envuelto en hojas de bijao y asado, típico de la Amazonía.',
           receta: 'Ingredientes y pasos para preparar maito.'
         },
         {
           nombre: 'Chontacuro',
-          imagen: 'assets/images/Platos/chontacuro.jpg',
+          imagen: 'assets/Platos/chontacuro.jpg',
           descripcion: 'Gusano de chonta, una delicia amazónica.',
           receta: 'Ingredientes y pasos para preparar chontacuro.'
         }
@@ -85,18 +85,18 @@ export class RecetasRegionComponent {
     },
     {
       nombre: 'Insular',
-      imagen: 'assets/images/Regiones/Insular.jpg',
+      imagen: 'assets/Regiones/Insular.jpg',
       descripcion: 'La región insular del Ecuador, conocida por las islas Galápagos y su cocina marinera.',
       recetas: [
         {
           nombre: 'Langosta',
-          imagen: 'assets/images/Platos/langosta.jpg',
+          imagen: 'assets/Platos/langosta.jpg',
           descripcion: 'Langosta fresca de las islas Galápagos.',
           receta: 'Ingredientes y pasos para preparar langosta.'
         },
         {
           nombre: 'Sopa marinera',
-          imagen: 'assets/images/Platos/sopa_marinera.jpg',
+          imagen: 'assets/Platos/sopa_marinera.jpg',
           descripcion: 'Sopa de mariscos típica de la región insular.',
           receta: 'Ingredientes y pasos para preparar sopa marinera.'
         }
