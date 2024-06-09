@@ -1,0 +1,57 @@
+.registro-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 0px;
+    
+    
+  }
+  
+  .registro-container h2 {
+    text-align: center;
+  }
+  
+  .registro-container form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .registro-container form div {
+    margin-bottom: 10px;
+    
+  }
+  
+  .registro-container label {
+    font-weight: bold;
+  }
+  
+  .registro-container input {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .registro-container button {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .registro-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .login-container {
+    background-image: url('../../assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  
+  }
