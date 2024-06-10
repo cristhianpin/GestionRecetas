@@ -35,7 +35,7 @@ export class RecetasRegionComponent {
           nombre: 'Ceviche',
           imagen: 'assets/Platos/ceviche.jpg',
           descripcion: 'Delicioso ceviche de camarones típico de la costa ecuatoriana.',
-          receta: 'Ingredientes y pasos para preparar el ceviche.'
+          receta: 'Ingredientes y pasos para preparar el ceviche. ' 
         },
         {
           nombre: 'Encebollado',
@@ -92,13 +92,13 @@ export class RecetasRegionComponent {
           nombre: 'Langosta',
           imagen: 'assets/Platos/langosta.jpg',
           descripcion: 'Langosta fresca de las islas Galápagos.',
-          receta: 'Ingredientes y pasos para preparar langosta.'
+          receta: 'Ingredientes y pasos para preparar langosta.',
         },
         {
           nombre: 'Sopa marinera',
           imagen: 'assets/Platos/sopa_marinera.jpg',
           descripcion: 'Sopa de mariscos típica de la región insular.',
-          receta: 'Ingredientes y pasos para preparar sopa marinera.'
+          receta: 'Ingredientes y pasos para preparar sopa marinera. /n dfff'
         }
       ]
     }

@@ -32,3 +32,22 @@ header {
     color: rgb(255, 255, 255);
   }
   
+  .navbar button {
+    background-color: blue;
+    color: white;
+    margin-left: 10px;
+    margin-right: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar button:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar button:hover {
+    background-color: darkblue;
+  }
+  

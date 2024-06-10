@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    permisoLocal = false;
+    HeaderComponent.HeaderComponent().permiso=permiso; 
+  </script>
+  <span *ngIf="permisoPadre== 'false' ">
+
+    <app-headermenu></app-headermenu>
+  
+</span> 
+  
+  <span *ngIf="permisoPadre== 'true' ">
+   
+    <app-header></app-header>
+
+</span> 

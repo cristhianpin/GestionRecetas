@@ -11,6 +11,7 @@ import { RecetasRegionComponent } from './Menus/recetas-region/recetas-region.co
 import { RegistroComponent } from './registro/registro.component';
 import { HeadermenuComponent } from './Menus/headermenu/headermenu.component';
 import { PopularesComponent } from './Menus/populares/populares.component';
+import { HeaderControladorComponent } from './Prelogueo/header-controlador/header-controlador.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PopularesComponent } from './Menus/populares/populares.component';
     RegistroComponent,
     HeadermenuComponent,
     PopularesComponent,
+    HeaderControladorComponent,
     
   ],
   imports: [
