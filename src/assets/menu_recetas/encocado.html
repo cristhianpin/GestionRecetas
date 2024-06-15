@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encocado de Pescado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+        .image-container, .text-container {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .image-container img {
+            width: 20cm;
+            height: 20cm;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .text-block {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        ul, ol {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encocado de Pescado</h1>
+    </header>
+
+    <div class="container">
+        <div class="text-container">
+            <div class="text-block">
+                <h2>Ingredientes:</h2>
+                <ul>
+                    <li>Pescado (corvina o dorado)</li>
+                    <li>Leche de coco</li>
+                    <li>Cebolla</li>
+                    <li>Pimiento</li>
+                    <li>Ajo</li>
+                    <li>Cilantro</li>
+                    <li>Comino</li>
+                    <li>Aceite</li>
+                    <li>Sal</li>
+                </ul>
+            </div>
+            <div class="text-block">
+                <h2>Preparación:</h2>
+                <ol>
+                    <li>Sofreír cebolla, pimiento y ajo.</li>
+                    <li>Agregar el pescado y cocinar hasta que esté dorado.</li>
+                    <li>Verter la leche de coco y cocinar a fuego lento.</li>
+                    <li>Agregar cilantro y comino, y cocinar hasta que espese.</li>
+                </ol>
+            </div>
+            <div class="text-block">
+                <h2>Tips:</h2>
+                <ul>
+                    <li>Usa leche de coco fresca para un mejor sabor.</li>
+                    <li>Acompaña con arroz blanco y patacones.</li>
+                    <li>Añade un toque de limón al servir.</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <button onclick="window.location.href = '/';">Retroceder</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="encocado.png" alt="Encocado de Pescado">
+        </div>
+    </div>
+</body>
+</html>

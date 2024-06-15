@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceviche de Camarón</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+        .image-container, .text-container {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .image-container img {
+            width: 20cm;
+            height: 20cm;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .text-block {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        ul, ol {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ceviche de Camarón</h1>
+    </header>
+
+    <div class="container">
+        <div class="text-container">
+            <div class="text-block">
+                <h2>Ingredientes:</h2>
+                <ul>
+                    <li>Camarones frescos</li>
+                    <li>Jugo de limón</li>
+                    <li>Cebolla roja</li>
+                    <li>Tomate</li>
+                    <li>Pimiento</li>
+                    <li>Cilantro</li>
+                    <li>Aceite</li>
+                    <li>Sal</li>
+                    <li>Pimienta</li>
+                </ul>
+            </div>
+            <div class="text-block">
+                <h2>Preparación:</h2>
+                <ol>
+                    <li>Cocer los camarones en agua con sal.</li>
+                    <li>Enfriar y pelar los camarones.</li>
+                    <li>Picar cebolla, tomate y pimiento en trozos pequeños.</li>
+                    <li>Mezclar los camarones con las verduras picadas.</li>
+                    <li>Agregar jugo de limón, aceite, sal y pimienta al gusto.</li>
+                    <li>Refrigerar por 30 minutos antes de servir.</li>
+                </ol>
+            </div>
+            <div class="text-block">
+                <h2>Tips:</h2>
+                <ul>
+                    <li>Usa camarones frescos para un mejor sabor.</li>
+                    <li>Acompaña con chifles o tostado.</li>
+                    <li>Añade un poco de jugo de naranja para un toque dulce.</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <button onclick="window.location.href = '/';">Retroceder</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="ceviche.png" alt="Ceviche de Camarón">
+        </div>
+    </div>
+</body>
+</html>

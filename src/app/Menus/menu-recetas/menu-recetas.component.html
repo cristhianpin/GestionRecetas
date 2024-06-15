@@ -1,0 +1,17 @@
+
+<h1>LISTADO DE RECETAS</h1>
+
+<div class="grid-container">
+  <div *ngFor="let receta of listaRecetas" class="grid-item">
+    <div class="producto-container">
+      <img [src]="receta.imagen" alt="Imagen del producto" class="product-image">
+      <h2 class="receta-name">{{ receta.nombre }}</h2>
+      <button (click)="verMas(receta.url)">VER MAS</button>
+    </div>
+  </div>
+</div>
+<script>
+    function verMas(url) {
+      location.href = url;
+    }
+  </script>

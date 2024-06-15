@@ -23,7 +23,7 @@ export class LoginComponent {
   login() {
 
     this._dataService.permiso$.emit('false')
-    this.router.navigate(['/Menu']); // Navegar a la página de inicio
+    this.router.navigate(['/MenuRecetas']); // Navegar a la página de inicio
 
 
   }

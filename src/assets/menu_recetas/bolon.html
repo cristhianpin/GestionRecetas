@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolón</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+        .image-container, .text-container {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .image-container img {
+            width: 20cm;
+            height: 20cm;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .text-block {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        ul, ol {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bolón</h1>
+    </header>
+
+    <div class="container">
+        <div class="text-container">
+            <div class="text-block">
+                <h2>Ingredientes:</h2>
+                <ul>
+                    <li>Plátano verde</li>
+                    <li>Queso o chicharrón</li>
+                    <li>Ajo</li>
+                    <li>Aceite</li>
+                    <li>Sal</li>
+                </ul>
+            </div>
+            <div class="text-block">
+                <h2>Preparación:</h2>
+                <ol>
+                    <li>Freír los plátanos hasta que estén dorados.</li>
+                    <li>Machacar los plátanos con ajo y sal.</li>
+                    <li>Formar bolas agregando queso o chicharrón en el centro.</li>
+                    <li>Freír nuevamente hasta que estén dorados y crujientes.</li>
+                </ol>
+            </div>
+            <div class="text-block">
+                <h2>Tips:</h2>
+                <ul>
+                    <li>Utiliza plátanos verdes para una mejor consistencia.</li>
+                    <li>Añade un poco de mantequilla para darle más sabor.</li>
+                    <li>Sirve el bolón con café o jugo natural.</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <button onclick="window.location.href = '/';">Retroceder</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="bolon.png" alt="Bolón">
+        </div>
+    </div>
+</body>
+</html>
