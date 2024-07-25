@@ -6,6 +6,8 @@ import { RegistroComponent } from './registro/registro.component';
 import { PopularesComponent } from './Menus/populares/populares.component';
 import { RecetasRegionComponent } from './Menus/recetas-region/recetas-region.component';
 import { MenuRecetasComponent } from './Menus/menu-recetas/menu-recetas.component';
+import { VistaClientesComponent } from './VistaAdmin/vista-clientes/vista-clientes.component';
+import { VistaRecetasComponent } from './VistaAdmin/vista-recetas/vista-recetas.component';
 
 
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: 'Registro', component: RegistroComponent},
   {path: 'MenuRecetas', component: MenuRecetasComponent },
   {path: 'Populares', component: PopularesComponent},
-  {path: 'Regiones', component: RecetasRegionComponent}
+  {path: 'Regiones', component: RecetasRegionComponent},
+  {path: 'ReClientes', component: VistaClientesComponent},
+  {path: 'ReRecetas', component: VistaRecetasComponent}
 
 ];
 

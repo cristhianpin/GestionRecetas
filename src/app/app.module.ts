@@ -15,6 +15,7 @@ import { HeaderControladorComponent } from './PreLogueo/header-controlador/heade
 import { MenuRecetasComponent } from './Menus/menu-recetas/menu-recetas.component';
 import { VistaRecetasComponent } from './VistaAdmin/vista-recetas/vista-recetas.component';
 import { VistaClientesComponent } from './VistaAdmin/vista-clientes/vista-clientes.component';
+import { HeaderadminComponent } from './VistaAdmin/headeradmin/headeradmin.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { VistaClientesComponent } from './VistaAdmin/vista-clientes/vista-client
     MenuRecetasComponent,
     VistaRecetasComponent,
     VistaClientesComponent,
+    HeaderadminComponent,
     
   ],
   imports: [
