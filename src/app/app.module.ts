@@ -13,6 +13,8 @@ import { HeadermenuComponent } from './Menus/headermenu/headermenu.component';
 import { PopularesComponent } from './Menus/populares/populares.component';
 import { HeaderControladorComponent } from './PreLogueo/header-controlador/header-controlador.component';
 import { MenuRecetasComponent } from './Menus/menu-recetas/menu-recetas.component';
+import { VistaRecetasComponent } from './VistaAdmin/vista-recetas/vista-recetas.component';
+import { VistaClientesComponent } from './VistaAdmin/vista-clientes/vista-clientes.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { MenuRecetasComponent } from './Menus/menu-recetas/menu-recetas.componen
     PopularesComponent,
     HeaderControladorComponent,
     MenuRecetasComponent,
+    VistaRecetasComponent,
+    VistaClientesComponent,
     
   ],
   imports: [

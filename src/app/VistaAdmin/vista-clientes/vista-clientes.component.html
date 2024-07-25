@@ -1,0 +1,99 @@
+
+<div class="container mt-5">
+
+    <form action="#" method="post" (submit)="registrarCliente($event)">
+  
+    <div class="row align-items-center custom-border">
+    
+      <div class="col-md-4">
+        <div class="form-group ">
+          <label for="f_nombre">Nombre:</label>
+          <input type="text" id="f_nombre" name="nombre" required><br><br>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="f_correo">Correo:</label>
+          <input type="email" id="f_correo" name="correo" required><br><br>
+        </div>
+      </div>
+    
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="f_clave">Clave:</label>
+          <input type="password" id="f_clave" name="clave" required><br><br>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="f_telefono">Telefono:</label>
+          <input type="text" id="f_telefono" name="telefono" required><br><br>
+        </div>
+      </div>
+  
+  
+    <div class="col-md-6" style="padding: 10px;">
+  
+      <input type="submit" class="btn btn-primary btn-full-width" value="Registrarse"> <i class="bi bi-person-plus" > </i>
+  
+       </div>
+    
+    </div>
+  <br>
+      TABLA CLIENTES
+  <br>
+  .
+  <div class="overflow-x-auto p-4 border border-gray-300 rounded-lg">
+     
+    
+    
+    <table class="table table-xs">
+        
+        <thead>
+          <tr>
+            <th>#</th> 
+            <th>Nombre</th> 
+            <th>correo</th>
+            <th>Clave</th> 
+            <th>Telefono</th>
+            <th>Direccion</th> 
+            <th>Acciones </th>
+  
+  
+            
+          </tr>
+        </thead> 
+       
+              <tbody>
+          <tr>
+            <tr *ngFor="let cliente of clientes let i=index">
+              <th scope="row"> {{i+1}} </th>
+              <td>{{ cliente.Nombre }}</td>
+              <td>{{ cliente.Correo }}</td>
+              <td>{{ cliente.Clave }}</td>
+              <td>{{ cliente.telefono}}</td>
+              <td>{{ '2' }}</td>
+  
+              <td>
+  
+                <span class="cursor text-danger" (click)="eliminarCliente(i)">
+                  <i class="bi bi-trash2-fill"></i>
+                </span>
+            </td>
+  
+          </tr>
+        </tbody> 
+        <hr>
+        - 
+        <hr>
+              
+       
+      </table>
+     
+  </div>
+  
+   </form>
+    
+  </div>
