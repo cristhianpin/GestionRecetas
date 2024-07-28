@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,9 +19,10 @@ import { PopularesComponent } from './Menus/populares/populares.component';
 import { HeaderControladorComponent } from './PreLogueo/header-controlador/header-controlador.component';
 import { MenuRecetasComponent } from './Menus/menu-recetas/menu-recetas.component';
 import { VistaRecetasComponent } from './VistaAdmin/vista-recetas/vista-recetas.component';
-import { VistaClientesComponent } from './VistaAdmin/vista-clientes/vista-clientes.component';
 import { HeaderadminComponent } from './VistaAdmin/headeradmin/headeradmin.component';
 import { RegistraclientesComponent } from './VistaAdmin/registraclientes/registraclientes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,6 @@ import { RegistraclientesComponent } from './VistaAdmin/registraclientes/registr
     HeaderControladorComponent,
     MenuRecetasComponent,
     VistaRecetasComponent,
-    VistaClientesComponent,
     HeaderadminComponent,
     RegistraclientesComponent,
     
@@ -44,7 +45,8 @@ import { RegistraclientesComponent } from './VistaAdmin/registraclientes/registr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    FormsModule 
 
   ],
   providers: [],

@@ -1,7 +1,7 @@
 
 <div class="container mt-5">
 
-    <form action="#" method="post">
+  <form action="#" method="post" (submit)="registrarCliente($event)">
   
     <div class="row align-items-center custom-border">
     
@@ -45,6 +45,43 @@
       TABLA CLIENTES
   <br>
   
-   </form>
+  <div class="overflow-x-auto p-4 border border-gray-300 rounded-lg">
+   
+    <table class="table table-xs">
+        
+        <thead>
+          <tr>
+            <th>#</th> 
+            <th>Nombre</th> 
+            <th>correo</th>
+            <th>Clave</th> 
+            <th>Telefono</th>
+            <th>Id_usuario</th>
+            <th>Acciones </th>
+  
+  
+            
+          </tr>
+        </thead> 
+
+        <tbody>
+          <tr>
+            <tr *ngFor="let cliente of clientes let i=index">
+              <th scope="row"> {{i+1}} </th>
+              <td>{{ cliente.nombre }}</td>
+              <td>{{ cliente.correo }}</td>
+              <td>{{ cliente.clave }}</td>
+              <td>{{ cliente.telefono}}</td>
+              <td>{{ '2' }}</td>
+              <td><button class="btn btn-sm btn-danger" (click)="eliminarCliente(i)">Eliminar</button></td>
+
+  
+             
+          </tr>
+        </tbody> 
+       
+       
+    </table>
+
     
   </div>

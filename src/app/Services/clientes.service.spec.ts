@@ -1,28 +1,17 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Clientes } from '../models/Clientes';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class ClientesService {
-  private apiUrl = 'https://localhost:7174/api'; // URL de tu API
+import { TestBed } from '@angular/core/testing';
+import { ClientesService } from './cliente.service';
 
 
-  constructor(private http: HttpClient) { }
+describe('ClientesService', () => {
+  let service: ClientesService;
 
-  agregarProducto(clientes: Clientes) {
-    return this.http.post(this.apiUrl, clientes);
-  }
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(ClientesService);
+  });
 
-  getDatos(): Observable<any> {
-    
-    return this.http.get(`${this.apiUrl}/Clientes`);
-    
-  }
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
 
-  postDatos(datos: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/Clientes`, datos);
-  }
-}

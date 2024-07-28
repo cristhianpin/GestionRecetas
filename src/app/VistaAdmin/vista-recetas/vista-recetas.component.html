@@ -1,28 +1,52 @@
 <!-- recipe-form.component.html -->
 <div class="container">
-    <h2> Registro de recetas</h2>
-    <form>
-      <div class="form-group">
-        <label for="title">Titulo:</label>
-        <input id="title" type="text" class="form-control">
-      </div>
-  
-      <div class="form-group">
-        <label for="description">Descripción:</label>
-        <textarea id="description" class="form-control"></textarea>
-      </div>
-  
-      <div class="form-group">
-        <label for="ingredients">Ingredientes:</label>
-        <textarea id="ingredients" class="form-control"></textarea>
-      </div>
-  
-      <div class="form-group">
-        <label for="instructions">Instrucciones:</label>
-        <textarea id="instructions" class="form-control"></textarea>
-      </div>
-  
-      <button type="submit" class="btn btn-primary">Registrar Receta</button>
-    </form>
-  </div>
-  
+  <h2>Registro de recetas</h2>
+  <form>
+    <div class="form-group">
+      <label for="title">Título:</label>
+      <input id="title" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descripción:</label>
+      <textarea id="description" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="ingredients">Ingredientes:</label>
+      <textarea id="ingredients" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="instructions">Instrucciones:</label>
+      <textarea id="instructions" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar Receta</button>
+  </form>
+
+  <h2>Lista de Recetas</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th> 
+        <th>Titulo</th> 
+        <th>Descripción</th>
+        <th>Ingredientes</th> 
+        <th>Instrucciones</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí puedes agregar las filas dinámicamente -->
+      <tr>
+        <td>1</td>
+        <td>Juan Perez</td>
+        <td>juan.perez@example.com</td>
+        <td>1234</td>
+        <td>555-1234</td>
+        <td><button class="btn btn-sm btn-danger">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

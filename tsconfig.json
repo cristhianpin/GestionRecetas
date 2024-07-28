@@ -19,6 +19,8 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "types": ["jasmine"], // O usa "mocha" si ese es el que estás usando
+
     "lib": [
       "ES2022",
       "dom"
