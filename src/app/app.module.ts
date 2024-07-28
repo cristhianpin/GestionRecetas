@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './PreLogueo/login/login.component';
 import { AcercaDeComponent } from './PreLogueo/acerca-de/acerca-de.component';
@@ -16,6 +20,7 @@ import { MenuRecetasComponent } from './Menus/menu-recetas/menu-recetas.componen
 import { VistaRecetasComponent } from './VistaAdmin/vista-recetas/vista-recetas.component';
 import { VistaClientesComponent } from './VistaAdmin/vista-clientes/vista-clientes.component';
 import { HeaderadminComponent } from './VistaAdmin/headeradmin/headeradmin.component';
+import { RegistraclientesComponent } from './VistaAdmin/registraclientes/registraclientes.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +38,14 @@ import { HeaderadminComponent } from './VistaAdmin/headeradmin/headeradmin.compo
     VistaRecetasComponent,
     VistaClientesComponent,
     HeaderadminComponent,
+    RegistraclientesComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

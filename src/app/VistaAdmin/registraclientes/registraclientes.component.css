@@ -1,0 +1,18 @@
+.custom-border {
+    border: 3px solid #c23434;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  input{
+    text-align: center;
+    height:fit-content;
+}
+
+.form-control-lg{
+    font-size: x-large;
+}
+
+.cursor{
+    cursor: pointer;
+}

@@ -16,7 +16,7 @@ export class HeaderadminComponent {
     // Ejemplo de lógica de cierre de sesión:
     // authService.logout();
     this._dataService.permiso$.emit('true')
-    this.router.navigate(['/home']);
+    this.router.navigate(['/AcercaDe']);
     
   }
 
