@@ -34,19 +34,27 @@
         <th>Descripción</th>
         <th>Ingredientes</th> 
         <th>Instrucciones</th>
+        <th>Tipo de Receta</th>
         <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
       <!-- Aquí puedes agregar las filas dinámicamente -->
-      <tr>
-        <td>1</td>
-        <td>Juan Perez</td>
-        <td>juan.perez@example.com</td>
-        <td>1234</td>
-        <td>555-1234</td>
-        <td><button class="btn btn-sm btn-danger">Eliminar</button></td>
-      </tr>
-    </tbody>
+      <tbody>
+        <tr>
+          <tr *ngFor="let recetas of recetas let i=index">
+            <th scope="row"> {{i+1}} </th>
+            <td>{{ recetas.titulo }}</td>
+            <td>{{ recetas.descripcion }}</td>
+            <td>{{ recetas.ingredientes }}</td>
+            <td>{{ recetas.instrucciones}}</td>
+            <td>{{ '2' }}</td>
+            <td><button class="btn btn-sm btn-danger" (click)="eliminarRecetas(i)">Eliminar</button></td>
+
+
+           
+        </tr>
+      </tbody> 
+     
   </table>
 </div>
