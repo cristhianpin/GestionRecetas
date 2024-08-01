@@ -23,7 +23,8 @@ export class LoginComponent {
   login() {
 
     this._dataService.permiso$.emit('false')
-    this.router.navigate(['/RegistrarC']); // Navegar a la página de inicio
+    this.router.navigate(['/MenuRecetas']); // Vista cliente
+ //   this.router.navigate(['/RegistrarC']); // Vista admin
 
 
   }
