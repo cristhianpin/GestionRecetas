@@ -11,89 +11,86 @@ import { RecetasService } from 'src/app/Services/recetas.service';
 export class VistaRecetasComponent {
 
   recetas!: Recetas[];
-  formulario ={
+  formulario = {
     idReceta: '',
     titulo: '',
-    descripción: '',
+    descripcion: '',
     ingredientes: '',
     instrucciones: '',
-
+    idTipoReceta: '',
   };
 
-    constructor (private registrarrecetas: RecetasService, registrarrecetasService: RecetasService){
-      this.obtenerrecetas();
+  registroExitoso = false;
+  registroFallido = false;
 
-    }
+  constructor(private registrarrecetas: RecetasService, registrarrecetasService: RecetasService) {
+    this.obtenerRecetas();
+  }
 
+  obtenerRecetas() {
+    console.log('Iniciando la obtención de recetas...');
+    this.registrarrecetas.getDatos().subscribe(data => {
+      this.recetas = data;
+      console.log('Recetas obtenidas:', this.recetas);
+    }, error => {
+      console.error('Error al obtener las recetas:', error);
+    });
+  }
+
+  eliminarRecetas(indice: number): void {
+    console.log('Eliminando receta en el índice:', indice);
+    const recetaEliminada = this.recetas.splice(indice, 1)[0];
+    console.log('Receta eliminada:', recetaEliminada);
+    // Puedes añadir lógica adicional para eliminar la receta del backend si es necesario
+    // this.registrarrecetas.deleteDatos(recetaEliminada.idReceta).subscribe(...);
+  }
+
+  registrarRecetas(event: Event) {
+    event.preventDefault();
+    console.log('Iniciando el registro de una nueva receta...');
     
-    registroExitoso = false;
-    registroFallido = false;
+    const idReceta = getUniqueID();
+    const titulo = (document.getElementById('f_titulo') as HTMLInputElement).value;
+    const descripcion = (document.getElementById('f_descripcion') as HTMLInputElement).value;
+    const ingredientes = (document.getElementById('f_ingredientes') as HTMLInputElement).value;
+    const instrucciones = (document.getElementById('f_instrucciones') as HTMLInputElement).value;
+    const idTipoReceta = (document.getElementById('f_idTipoReceta') as HTMLInputElement).value;
 
-    obtenerrecetas(){
+    const nuevaReceta: Recetas = {
+      idReceta: idReceta,
+      titulo: titulo,
+      descripcion: descripcion,
+      ingredientes: ingredientes,
+      instrucciones: instrucciones,
+      idTipoReceta: idTipoReceta,
+    };
 
-      this.registrarrecetas.getDatos().subscribe(data =>{
-        this.recetas = data;
-        console.log(this.recetas)
-      })
-    }
+    console.log('Datos de la nueva receta:', nuevaReceta);
 
-    eliminarRecetas(indice:number): void{
-      //this.listPersona.splice(id,1);
-      const clienteeliminado = this.recetas.splice(indice, 1)[0];
-  
+    this.registrarrecetas.postDatos(nuevaReceta).subscribe(response => {
+      this.registroExitoso = true;
+      this.registroFallido = false;
+      console.log('Receta registrada con éxito:', response);
+
+      // Reiniciar el formulario después de 5 segundos
+      setTimeout(() => {
+        this.formulario = {
+          idReceta: '',
+          titulo: '',
+          descripcion: '',
+          ingredientes: '',
+          instrucciones: '',
+          idTipoReceta: '',
+        };
+        this.registroExitoso = false; // Restablecer el estado de éxito
+        console.log('Formulario reiniciado.');
+      }, 5000);
       
-        this.recetas.push(clienteeliminado);
-    }
-
-    registrarRecetas(event: Event){
-        event.preventDefault();
-        const idReceta = getUniqueID();
-        const titulo = (document.getElementById('f_titulo') as HTMLInputElement).value;
-        const descripcion = (document.getElementById('f_descripcion') as HTMLInputElement).value;
-        const ingredientes = (document.getElementById('f_ingredientes') as HTMLInputElement).value;
-        const instrucciones = (document.getElementById('f_instrucciones') as HTMLInputElement).value;
-
-        const nuevoregistro: Recetas = {
-          idReceta: idReceta,
-          titulo: titulo,
-          descripcion: descripcion,
-          ingredientes: ingredientes,
-          instrucciones: instrucciones,
-      };
-  
-
-      this.registrarrecetas.postDatos(nuevoregistro)
-    .subscribe(response =>{
-    this.registroExitoso = true;
-    this.registroFallido = false;
-
-
-    console.log('registrado:', response);
-    console.log('data ->', nuevoregistro);
-
-        // Reiniciar el formulario después de 5 segundos
-        setTimeout(() => {
-          this.formulario = {
-            idReceta: '',
-            titulo: '',
-            descripción: '',
-            ingredientes: '',
-            instrucciones: '',
-            
-          };
-          this.registroExitoso = false; // Restablecer el estado de éxito
-        }, 5000);
-
-
-      },error => {
-        this.registroExitoso = false;
-        this.registroFallido = true;
-        console.error('Error al registrar el cliente:', error);
-        console.log("cliente -> ", nuevoregistro )
-    
-    })
-
-
-    }
-
+    }, error => {
+      this.registroExitoso = false;
+      this.registroFallido = true;
+      console.error('Error al registrar la receta:', error);
+      console.log('Datos enviados:', nuevaReceta);
+    });
+  }
 }
