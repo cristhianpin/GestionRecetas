@@ -1,46 +1,49 @@
-
 <div class="container mt-5">
-
-  <form action="#" method="post" (submit)="registrarCliente($event)">
-  
+  <form (submit)="registrarCliente($event)">
     <div class="row align-items-center custom-border">
-    
       <div class="col-md-4">
-        <div class="form-group ">
+        <div class="form-group">
           <label for="f_nombre">Nombre:</label>
           <input type="text" id="f_nombre" name="nombre" required><br><br>
         </div>
       </div>
-    
+
       <div class="col-md-4">
         <div class="form-group">
           <label for="f_correo">Correo:</label>
           <input type="email" id="f_correo" name="correo" required><br><br>
         </div>
       </div>
-    
+
       <div class="col-md-3">
         <div class="form-group">
           <label for="f_clave">Clave:</label>
           <input type="password" id="f_clave" name="clave" required><br><br>
         </div>
       </div>
-  
+
       <div class="col-md-4">
         <div class="form-group">
-          <label for="f_telefono">Telefono:</label>
+          <label for="f_telefono">Teléfono:</label>
           <input type="text" id="f_telefono" name="telefono" required><br><br>
         </div>
       </div>
-  
-  
-    <div class="col-md-6" style="padding: 10px;">
-  
-      <input type="submit" class="btn btn-primary btn-full-width" value="Registrarse"> <i class="bi bi-person-plus" > </i>
-  
-       </div>
-    
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="f_idUsuario">Id Usuario:</label>
+          <input type="text" id="f_idUsuario" name="idUsuario" required><br><br>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="padding: 10px;">
+        <input type="submit" class="btn btn-primary btn-full-width" value="Registrarse">
+        <i class="bi bi-person-plus"></i>
+      </div>
     </div>
+  </form>
+</div>
+
   <br>
       TABLA CLIENTES
   <br>
